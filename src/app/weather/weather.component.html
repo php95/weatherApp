@@ -1,3 +1,58 @@
-<div>
-    any
-</div>
+<section class="container center">
+    <div class="weather-wrapper">
+        <input class="city-search" type="text" />
+        <div class="weather temprature center">
+            <p class="country-name">
+                Auckland
+            </p>
+            <div style="display: flex;">
+                <p class="country-degree">
+                    20
+                    <span>&#8451;</span>
+                </p>
+
+            </div>
+        </div>
+        <div class="weather info">
+            <p class="info-text">
+                more information
+            </p>
+            <div class="info-details">
+                <div style="display: flex; justify-content: space-between;flex-wrap:wrap">
+                    <div style="display: flex; align-items: baseline; margin-bottom: 1rem;" *ngFor="let item of weatherData; index=i" >
+                        <div>
+                            <img [src]="item.iconSrc" class="icon-dimensions"/>
+                            <p>{{item.tempType}}</p>
+                        </div>
+                        <div style="margin-left: 1rem;" >
+                            {{item.value}}
+                            <span>&#8451;</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                    <div style="display: flex; align-items: baseline;">
+                        <div>
+                            <img src="../../assets/humidity.png" class="icon-dimensions"/>
+                            <p>min</p>
+                        </div>
+                        <div style="margin-left: 1rem;">
+                            15%
+                       
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: baseline;">
+                        <div>
+                            <img src="../../assets/wind.png" class="icon-dimensions"/>
+                            <p>wind</p>
+                        </div>
+                        <div style="margin-left: 1rem;">
+                            23<br> km/h
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

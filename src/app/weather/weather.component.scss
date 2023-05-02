@@ -1,0 +1,57 @@
+
+.container {
+    height: 100vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+}
+
+.city-search {
+    margin-bottom: 0.5rem;
+}
+
+.weather {
+    box-shadow: 10px 10px 10px var(--shadow-dark);
+    height: 40vh;
+    flex-direction: column;
+    &.temprature {
+        background-image: url('../../assets/vecteezy_beautiful-blue-mountain-landscape-with-sunrise-and-sunset-in_7162596.jpg');
+        border-radius: 15px 15px 0 0;
+        background-size: cover;
+    }
+
+    &.info {
+        background-color: var(--blue-1);
+        border-radius: 0 0 15px 15px;
+        padding: 0.5rem;
+    }
+}
+.country-name{
+    margin-bottom: 0.25rem;
+}
+
+.country-degree{
+    font-weight: bold;
+    font-size: xxx-large;
+}
+.info-text{
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.info-details{
+    background-color: #6c6f91;
+    padding: 1.5rem;
+}
+.icon-dimensions{
+    width: 20px;
+    height: 18px;
+}
