@@ -12,7 +12,7 @@
 .weather-wrapper {
     display: flex;
     flex-direction: column;
-    width: 22%;
+    width: 25%;
 }
 
 .city-search {
@@ -50,6 +50,9 @@
 .info-details{
     background-color: #6c6f91;
     padding: 1.5rem;
+    max-height: 80%;
+    box-shadow: 1px 1px 3px var(--shadow-dark);
+    border-radius: 0 0 15px 15px;
 }
 .icon-dimensions{
     width: 20px;

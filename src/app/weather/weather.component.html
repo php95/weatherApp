@@ -19,18 +19,19 @@
             </p>
             <div class="info-details">
                 <div style="display: flex; justify-content: space-between;flex-wrap:wrap">
-                    <div style="display: flex; align-items: baseline; margin-bottom: 1rem;" *ngFor="let item of weatherData; index=i" >
-                        <div>
-                            <img [src]="item.iconSrc" class="icon-dimensions"/>
+                    <div style="display: flex; align-items: baseline; margin-bottom: 1rem;" *ngFor = "let item of weatherData;let i = index" >
+                        <div style="margin-bottom: 1rem;">
+                            <img [src] = "item.iconSrc" class="icon-dimensions"/>
                             <p>{{item.tempType}}</p>
                         </div>
-                        <div style="margin-left: 1rem;" >
+                        <div style="margin-left: 1rem; margin-bottom: 1rem;" >
                             {{item.value}}
-                            <span>&#8451;</span>
+                            <span *ngIf="i!=2&&i!=3">&#8451;</span>
+                            <span *ngIf="i===3"><br> km/h</span>
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                <!-- <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
                     <div style="display: flex; align-items: baseline;">
                         <div>
                             <img src="../../assets/humidity.png" class="icon-dimensions"/>
@@ -51,7 +52,7 @@
                         
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -11,6 +11,6 @@
     --text-color: white;
 }
 body{
-    background-color: var(--blue-2);
-    color: var(--text-color);
+    background-color: var(--blue-2) !important;
+    color: var(--text-color) !important;
 }
